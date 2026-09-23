@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impresión - QR para Mesas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* A4 Size Print Setup */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-container {
+                box-shadow: none !important;
+            }
+        }
+
+        .print-container {
+            width: 210mm; /* A4 width */
+            height: 297mm; /* A4 height */
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            box-sizing: border-box;
+            border: 1px dashed #ccc; /* Guide for folding/cutting */
+        }
+
+        /* We create two halves so when folded it works like a table tent (hablador) */
+        .tent-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            box-sizing: border-box;
+            background: #0d0d0d;
+            color: #fff;
+            border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+        }
+
+        .tent-side.bottom {
+            transform: rotate(180deg);
+            border-bottom: none;
+            border-top: 2px dashed rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #c99a4e;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #c99a4e;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .qr-wrapper {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 4px solid #c99a4e;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .qr-wrapper img {
+            width: 250px;
+            height: 250px;
+            display: block;
+        }
+
+        .instruction {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .sub-instruction {
+            font-size: 1.1rem;
+            color: #999;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 30px;
+            background: #c99a4e;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(201, 154, 78, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+            background: #b08542;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Imprimir Diseño</button>
+
+    <div class="print-container">
+        <!-- Parte Superior del Hablador de Mesa -->
+        <div class="tent-side">
+            <div class="logo">STEAK <span>HOUSE</span></div>
+            <div class="subtitle">El Rincón del Valle</div>
+            
+            <div class="qr-wrapper">
+                <img src="QR_Menu.png" alt="QR del Menú">
+            </div>
+
+            <div class="instruction">ESCANEA PARA VER EL MENÚ</div>
+            <div class="sub-instruction">Apunta con la cámara de tu celular para ordenar</div>
+        </div>
+
+        <!-- Parte Inferior del Hablador (Dada la vuelta para doblar) -->
+        <div class="tent-side bottom">
+            <div class="logo">STEAK <span>HOUSE</span></div>
+            <div class="subtitle">El Rincón del Valle</div>
+            
+            <div class="qr-wrapper">
+                <img src="QR_Menu.png" alt="QR del Menú">
+            </div>
+
+            <div class="instruction">ESCANEA PARA VER EL MENÚ</div>
+            <div class="sub-instruction">Apunta con la cámara de tu celular para ordenar</div>
+        </div>
+    </div>
+
+</body>
+</html>

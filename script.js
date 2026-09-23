@@ -1,0 +1,81 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
+    const tabBtns = document.querySelectorAll(".tab-btn");
+    const menuGrids = document.querySelectorAll(".menu-grid");
+    const animatedElements = document.querySelectorAll(".fade-in-up, .fade-in, .slide-in-left, .slide-in-right");
+
+    const setScrolledState = () => {
+        navbar?.classList.toggle("scrolled", window.scrollY > 36);
+    };
+
+    setScrolledState();
+    window.addEventListener("scroll", setScrolledState, { passive: true });
+
+    const closeMobileMenu = () => {
+        hamburger?.classList.remove("active");
+        navLinks?.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        hamburger?.setAttribute("aria-expanded", "false");
+    };
+
+    hamburger?.setAttribute("aria-label", "Abrir navegacion");
+    hamburger?.setAttribute("aria-expanded", "false");
+    hamburger?.addEventListener("click", () => {
+        const isOpen = hamburger.classList.toggle("active");
+        navLinks?.classList.toggle("active", isOpen);
+        document.body.classList.toggle("menu-open", isOpen);
+        hamburger.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navItems.forEach((link) => link.addEventListener("click", closeMobileMenu));
+
+    tabBtns.forEach((btn) => {
+        btn.setAttribute("aria-controls", btn.dataset.target || "");
+        btn.setAttribute("aria-selected", btn.classList.contains("active") ? "true" : "false");
+
+        btn.addEventListener("click", () => {
+            const target = btn.dataset.target;
+
+            tabBtns.forEach((button) => {
+                button.classList.remove("active");
+                button.setAttribute("aria-selected", "false");
+            });
+
+            menuGrids.forEach((grid) => grid.classList.remove("active"));
+
+            btn.classList.add("active");
+            btn.setAttribute("aria-selected", "true");
+            document.getElementById(target)?.classList.add("active");
+        });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.16,
+        rootMargin: "0px 0px -60px 0px"
+    });
+
+    animatedElements.forEach((element) => revealObserver.observe(element));
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            navItems.forEach((link) => {
+                link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+            });
+        });
+    }, {
+        threshold: 0.42
+    });
+
+    document.querySelectorAll("section[id], footer[id]").forEach((section) => sectionObserver.observe(section));
+});

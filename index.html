@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steak House - El Rincón del Valle</title>
+    <meta name="description" content="Steak House El Rincón del Valle: carnes a la brasa, parrilladas, postres, cervezas y ambiente familiar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">STEAK <span>HOUSE</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reviews">Opiniones</a></li>
+                <li><a href="#info">Visítanos</a></li>
+            </ul>
+            <a class="nav-cta" href="#menu">Ordenar</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="ember ember-one"></div>
+        <div class="ember ember-two"></div>
+        <div class="hero-content fade-in-up">
+            <p class="eyebrow">El Rincón del Valle Restaurante</p>
+            <h1 class="hero-title">Steak House</h1>
+            <p class="hero-desc">Cortes al carbón, parrilladas generosas y una mesa lista para quedarse un rato más.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Ver menú</a>
+                <a href="#info" class="btn btn-secondary">Reservar mesa</a>
+            </div>
+            <div class="hero-stats" aria-label="Caracteristicas del restaurante">
+                <div><strong>300g</strong><span>Lomo premium</span></div>
+                <div><strong>$4.50</strong><span>Menú infantil</span></div>
+                <div><strong>9</strong><span>Categorías</span></div>
+            </div>
+        </div>
+        <div class="hero-card fade-in">
+            <span class="hero-card-label">Recomendado</span>
+            <h2>Tomahawk de Res Premium</h2>
+            <p>Vegetales grillados, papas y el aroma intenso de la parrilla.</p>
+            <strong>$15.00</strong>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text slide-in-left">
+                    <p class="eyebrow">Parrilla, familia y buen ambiente</p>
+                    <h2 class="section-title">Nuestra Esencia</h2>
+                    <p>Ubicados en un entorno ideal tanto para <strong>grupos</strong> como para <strong>turistas</strong>, ofrecemos un espacio a la moda, agradable y relajado, donde cada comida se convierte en un momento especial. Somos el lugar perfecto para tu almuerzo, cena, o incluso una tranquila cena en solitario.</p>
+                    <ul class="highlights-list">
+                        <li><span class="icon">Café</span> Buen café</li>
+                        <li><span class="icon">Postres</span> Deliciosos postres</li>
+                        <li><span class="icon">Cervezas</span> Muy buena selección de cervezas</li>
+                    </ul>
+                </div>
+                <div class="about-image slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Ambiente de restaurante">
+                    <div class="image-badge">
+                        <strong>Para compartir</strong>
+                        <span>Almuerzo, cena y grupos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Banner -->
+    <section class="services-banner parallax">
+        <div class="services-grid container">
+            <div class="service-item fade-in">
+                <span>01</span>
+                <h3>Opciones de Servicio</h3>
+                <p>Consumo en el lugar, Para llevar, Entrega a domicilio.</p>
+            </div>
+            <div class="service-item fade-in">
+                <span>02</span>
+                <h3>Accesibilidad</h3>
+                <p>Espacio y sanitarios totalmente accesibles para personas en silla de ruedas.</p>
+            </div>
+            <div class="service-item fade-in">
+                <span>03</span>
+                <h3>Ambiente</h3>
+                <p>A la moda, agradable, informal y relajado. Ideal para ir con niños.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu section" id="menu">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <p class="eyebrow">Elige tu antojo</p>
+                <h2 class="section-title">Nuestro Menú</h2>
+                <p class="section-subtitle">Descubre nuestros cortes premium y especialidades</p>
+            </div>
+
+            <!-- Menu Categories Tabs -->
+            <div class="menu-tabs fade-in">
+                <button class="tab-btn active" data-target="entradas">Entradas & Picaditas</button>
+                <button class="tab-btn" data-target="carnes">Carnes de Res</button>
+                <button class="tab-btn" data-target="pollo-cerdo">Aves & Cerdo</button>
+                <button class="tab-btn" data-target="parrilladas">Parrilladas</button>
+                <button class="tab-btn" data-target="especialidades">Especialidades</button>
+                <button class="tab-btn" data-target="hamburguesas">Hamburguesas & Infantil</button>
+                <button class="tab-btn" data-target="vegetariano">Vegetariano & Desayunos</button>
+                <button class="tab-btn" data-target="bebidas">Bebidas</button>
+                <button class="tab-btn" data-target="extras">Extras</button>
+            </div>
+
+            <!-- Menu Content -->
+            <div class="menu-content">
+                <!-- Entradas & Picaditas -->
+                <div class="menu-grid active" id="entradas">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Empanadas de Morocho</h4><span class="price">$5.50</span></div><p>3 unidades con salsa de tsinso semipicante.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Alitas BBQ</h4><span class="price">$5.00</span></div><p>7 alitas en salsa BBQ, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Canapé de Queso Crema</h4><span class="price">$2.50</span></div></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Crema de Champiñones</h4><span class="price">$2.00</span></div></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Crema de Choclo con Queso</h4><span class="price">$2.50</span></div></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Sopa del Día</h4><span class="price">$4.50</span></div></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Mixto de Vísceras</h4><span class="price">$5.00</span></div><p>Chinchulines, riñones, corazones e hígados, acompañados de papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Riñones</h4><span class="price">$3.50</span></div><p>10 unidades acompañados de papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Corazones</h4><span class="price">$4.00</span></div><p>5 unidades acompañados de papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Longanizas</h4><span class="price">$3.50</span></div><p>4 unidades acompañadas de papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Hígados</h4><span class="price">$4.00</span></div><p>5 unidades acompañados de papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Mixto de Embutidos</h4><span class="price">$5.00</span></div><p>2 botones, 2 chorizos, 2 longanizas acompañadas de papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Chinchulines</h4><span class="price">$4.00</span></div><p>10 unidades acompañados de papas y ensalada.</p></div>
+                </div>
+
+                <!-- Carnes de Res -->
+                <div class="menu-grid" id="carnes">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Lomo Steak House</h4><span class="price">$10.00</span></div><p>Lomo fino de 300g en salsa jack daniel's con papa cocida rellena de champiñón, queso crema, aros de cebolla y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Filet Mignon</h4><span class="price">$8.75</span></div><p>Lomo fino de 200g envuelto con tocino, salsa de champiñones, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>T-Bone de Res</h4><span class="price">$9.00</span></div><p>Lomo premium en forma de T, papas fritas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Brocheta Mixta</h4><span class="price">$6.00</span></div><p>Dos brochetas de pollo con carne, pimiento, cebolla, papas, ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Churrasco</h4><span class="price">$6.00</span></div><p>Lomo de falda (95g) con arroz, huevos fritos, aguacate, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Filete de Res</h4><span class="price">$6.00</span></div><p>Lomo de falda (95g), con arroz, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Milanesa de Res</h4><span class="price">$6.50</span></div><p>Lomo apanado con queso mozzarella, papas fritas, arroz y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Bife de Chorizo</h4><span class="price">$9.75</span></div><p>Lomo de falda con bordes de grasa, papas fritas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>1/2 Lomo Fino</h4><span class="price">$8.50</span></div><p>Lomo fino de 215g, puré de papa, vegetales grillados y salsa de perejil.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Lomo en Salsa Diabla</h4><span class="price">$8.75</span></div><p>Lomo fino en reducción de salsa picante, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Chateubriand</h4><span class="price">$8.75</span></div><p>Lomo fino de 215g en salsa de 3 pimientas, papas, espárragos grillados, crocante.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Tomahawk de Res Premium</h4><span class="price">$15.00</span></div><p>Acompañado de vegetales grillados y papas.</p></div>
+                </div>
+
+                <!-- Aves & Cerdo -->
+                <div class="menu-grid" id="pollo-cerdo">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Pollo Parrilla</h4><span class="price">$6.00</span></div><p>Pechuga a la parrilla, papas fritas, arroz y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Pollo Enrollado al Tocino</h4><span class="price">$7.00</span></div><p>Con tocino y queso mozzarella, papas, arroz y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Pollo en Salsa Champiñón</h4><span class="price">$6.50</span></div><p>Pechuga con salsa de champiñón, papas fritas, arroz y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Pollo al Limón</h4><span class="price">$6.25</span></div><p>Pechuga a la parrilla en salsa de limón, papas fritas, arroz y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Milanesa de Pollo</h4><span class="price">$5.50</span></div><p>Filete apanado, arroz, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Chuleta de Cerdo</h4><span class="price">$6.00</span></div><p>A la parrilla, acompañada de arroz, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Chuleta Ahumada en Salsa Hawayana</h4><span class="price">$7.50</span></div><p>Salsa de piña y crema de leche, papas, arroz y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Chuleta en Salsa Romero</h4><span class="price">$6.25</span></div><p>Salsa de romero, papas, arroz y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Costillas BBQ</h4><span class="price">$8.50</span></div><p>Costillas de cerdo ahumadas en salsa BBQ, papas fritas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Chuleta con Menestra</h4><span class="price">$6.50</span></div><p>Chuleta de cerdo con menestra de lenteja, arroz, papas y ensalada.</p></div>
+                </div>
+
+                <!-- Parrilladas -->
+                <div class="menu-grid" id="parrilladas">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Parrillada Mixta</h4><span class="price">$20.00</span></div><p>2 chuletas, 2 filetes carne, 2 filetes pollo, 2 olmas, 2 morcillas, 1 trucha, ensalada, papas.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Parrillada Steak House</h4><span class="price">$18.00</span></div><p>2 chuletas, 2 filetes carne, 2 filetes pollo, 2 olmas, 2 morcillas, ensalada, papas.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Parrillada Rincón del Valle</h4><span class="price">$18.00</span></div><p>2 chuletas, 2 filetes carne, hígados, riñones, corazones, chinchulines, 2 olmas, 2 morcillas, ensalada, papas.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Parrillada Junior</h4><span class="price">$10.00</span></div><p>1 chuleta, 1 filete carne, 1 filete pollo, 1 olma, 1 morcilla, ensalada, papas.</p></div>
+                </div>
+
+                <!-- Especialidades (Trucha & Cordero) -->
+                <div class="menu-grid" id="especialidades">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Trucha a la Plancha</h4><span class="price">$6.00</span></div><p>Acompañada de arroz, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Trucha al Vapor</h4><span class="price">$6.25</span></div><p>Acompañada de papas, arroz y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Trucha al Ajillo</h4><span class="price">$6.50</span></div><p>En salsa de ajillo, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Trucha Frita</h4><span class="price">$8.50</span></div><p>Acompañada de curtido, arroz y papas.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Chuleta de Cordero</h4><span class="price">$8.50</span></div><p>300g al carbón con salsa de uvilla o mora, papas cocidas, salsa de queso y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Cordero al Carbón</h4><span class="price">$16.50</span></div><p>3 piezas (400g total), choclo, papas cocidas y ensalada.</p></div>
+                </div>
+
+                <!-- Hamburguesas & Menú Infantil -->
+                <div class="menu-grid" id="hamburguesas">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Hamburguesa Doble Steak</h4><span class="price">$6.00</span></div><p>Carne steak, mostaza, lechuga, tomate, tocino, queso cheddar, papas fritas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Hamburguesa Simple</h4><span class="price">$4.50</span></div><p>Vegetales, queso, papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Mini Carne de Res</h4><span class="price">$4.50</span></div><p>Papas, arroz y ensalada del día.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Mini Brocheta</h4><span class="price">$4.50</span></div><p>Carne y pollo con papas y ensalada.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Nuggets de Pollo</h4><span class="price">$4.50</span></div><p>4 nuggets con papas fritas y ensalada.</p></div>
+                </div>
+
+                <!-- Vegetariano & Desayunos -->
+                <div class="menu-grid" id="vegetariano">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Ensalada Americana</h4><span class="price">$3.00</span></div><p>Lechuga, piña, manzana, cebolla apanada, tomate, pimientos.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Ensalada del Chef</h4><span class="price">$4.00</span></div><p>Vegetales salteados, champiñones, pepinillo, tomates grillados, crocante, aguacate.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Fettucchini Vegetariano</h4><span class="price">$7.00</span></div><p>Pasta con vegetales grillados, salsa de soya o bechamel.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Desayuno Steak House</h4><span class="price">$4.00</span></div><p>Huevos con chorizo, café, jugo, sándwich.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Desayuno Completo</h4><span class="price">$5.00</span></div><p>Huevos, café, jugo, pan, pollo o carne al jugo con arroz y ensalada.</p></div>
+                </div>
+
+                <!-- Bebidas -->
+                <div class="menu-grid" id="bebidas">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Bebidas Especiales</h4><span class="price">Desde $1.00</span></div><p>Frapuchino de Café ($4.00), Frozen de Oreo ($4.00), Malteada Chocolate ($4.00), Infusión Montañero ($4.00), Té de frutas ($1.00)</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Limonadas y Jugos</h4><span class="price">Variado</span></div><p>Limonada Steak House ($3.75), Media Jarra ($2.50), Vaso ($1.25), Imperial ($4.00), Maracuyá ($2.50), Batidos ($2.00), Jugos ($1.50 - $1.75).</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Vinos & Sangría</h4><span class="price">Desde $1.75</span></div><p>Jarra Sangría ($9.00), 1/2 Jarra ($4.50), Copa ($1.75). Vinos: Sauvignon Cabernet, Malbec, Tempranillo, Carmenere, Carbenet.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Gaseosas y Aguas</h4><span class="price">Variado</span></div><p>Gaseosa Mediana/Pequeña, Gaseosa 1L ($2.00), Gaseosa 3L ($4.00). Agua sin gas ($0.75), Güitig pequeña ($0.80), Güitig grande ($2.00).</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Cervezas</h4><span class="price">Desde $1.50</span></div><p>Club personal ($1.50), Club mediana ($2.00), Pilsener ($2.00).</p></div>
+                </div>
+
+                <!-- Extras -->
+                <div class="menu-grid" id="extras">
+                    <div class="menu-item"><div class="menu-item-header"><h4>Papa Chaucha</h4><span class="price">$3.00</span></div></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Papas Fritas</h4><span class="price">$4.00</span></div></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Salsa de Queso</h4><span class="price">$2.50</span></div><p>Y porciones adicionales.</p></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Arroz</h4><span class="price">$2.00</span></div></div>
+                    <div class="menu-item"><div class="menu-item-header"><h4>Ensalada del Día</h4><span class="price">$2.50</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews section" id="reviews">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2 class="section-title">Lo que dicen de nosotros</h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Comida deliciosa y a precio accesible. Pensé que no me gustaría la ensalada ya que no es tradicional, pero a mi me resultó deliciosa."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h4>Gisela Guada Terán</h4>
+                            <span>Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Buenas carnes a la brasa y buena presentación de sus platos a un muy buen precio."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-info">
+                            <h4>Galo Oña</h4>
+                            <span>Local Guide</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info & Footer Section -->
+    <footer class="footer" id="info">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Steak House</h3>
+                    <p>El Rincón del Valle. Tu destino para las mejores carnes, en un ambiente relajado y para toda la familia.</p>
+                    <p><strong>Planificación:</strong> Se aceptan reservas.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Pagos Aceptados</h3>
+                    <ul class="footer-links">
+                        <li>Pagos móviles (NFC)</li>
+                        <li>Tarjetas de crédito</li>
+                        <li>Tarjetas de débito</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Estacionamiento</h3>
+                    <ul class="footer-links">
+                        <li>Hay suficiente espacio</li>
+                        <li>Estacionamiento gratuito en la calle</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Steak House - El Rincón del Valle. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
