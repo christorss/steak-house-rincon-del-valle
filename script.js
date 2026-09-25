@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const navItems = document.querySelectorAll(".nav-links a");
     const tabBtns = document.querySelectorAll(".tab-btn");
     const menuGrids = document.querySelectorAll(".menu-grid");
+    const menuTabs = document.querySelector(".menu-tabs");
+    const menuContent = document.querySelector(".menu-content");
     const animatedElements = document.querySelectorAll(".fade-in-up, .fade-in, .slide-in-left, .slide-in-right");
 
     const setScrolledState = () => {
@@ -32,6 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navItems.forEach((link) => link.addEventListener("click", closeMobileMenu));
 
+    const scrollToMenuStart = () => {
+        if (!menuTabs || !menuContent) return;
+
+        const navbarHeight = navbar?.getBoundingClientRect().height || 0;
+        const selectorHeight = menuTabs.getBoundingClientRect().height;
+        const breathingRoom = window.innerWidth <= 760 ? 12 : 18;
+        const menuTop = window.scrollY + menuContent.getBoundingClientRect().top;
+        const targetPosition = Math.max(0, menuTop - navbarHeight - selectorHeight - breathingRoom);
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+        });
+    };
+
     tabBtns.forEach((btn) => {
         btn.setAttribute("aria-controls", btn.dataset.target || "");
         btn.setAttribute("aria-selected", btn.classList.contains("active") ? "true" : "false");
@@ -49,6 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.classList.add("active");
             btn.setAttribute("aria-selected", "true");
             document.getElementById(target)?.classList.add("active");
+
+            requestAnimationFrame(scrollToMenuStart);
         });
     });
 
